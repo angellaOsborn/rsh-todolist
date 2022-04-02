@@ -1,0 +1,214 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+body {
+  background: linear-gradient(to bottom ,#8b8a8b,rgb(252, 200, 252), rgba(166, 187, 245, 0.979));
+  color: white;
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+}
+header {
+  font-size: 2rem;
+  text-shadow: 3px 1px 2px rgb(32, 2, 2);
+  color: #c40610;
+}
+
+header,
+form {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form input,
+form button {
+  padding: 0.5rem;
+  font-size: 2rem;
+  border: none;
+  background: #fff;
+}
+form input {
+   border-top-left-radius: 10px;
+   border-bottom-left-radius: 10px;
+   outline: none;
+   border: none;
+   padding: 0.5rem 0.6rem;
+   box-shadow: 0px 0px 2px #5f5f5f,
+  0px 0px 0px 5px rgb(245, 242, 242),
+  5px 5px 5px #ecf0ec,
+  3px 3px 15px #afaaa7,
+  -3px -3px 15px #fff;
+  margin-left: 15px;
+}
+form button {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 0px 0px 2px #5f5f5f,
+  0px 0px 0px 5px rgb(245, 242, 242),
+  5px 5px 5px #ecf0ec,
+  0px 0px 15px #530a00,
+  0px 0px 5px #fff;
+}
+form button {
+  color: #fcf8fa;
+  background: #f3052de1;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+form button:hover {
+  background: #15e631e1;
+  color: white;
+}
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-list {
+  min-width: 30%;
+  list-style: none;
+  border-radius: 10px;
+  margin-right: 3rem;
+}
+.todo {
+  margin: .8rem;
+  background: white;
+  font-size: 1.5rem;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 1s ease;
+}
+.filter-todo {
+  padding: 1rem;
+}
+
+.todo{
+  border-radius: 30px;
+  color: #fff;
+  background-image: linear-gradient(120deg, #8b1096f5 30%, #62b0fa 80%);
+}
+.todo li {
+  flex: 1;
+  width: 300px;
+  font-size: 30px;
+  /* background-image: linear-gradient(120deg, #82baee 50%, #d37b8df5 90%); */
+}
+.trash-btn,
+.complete-btn {
+  background-image: linear-gradient(120deg, #da125ff5 50%, #cc1111fa 100%);
+  color: white;
+  border: none;
+  padding: 1.6rem;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 50%;
+  margin-right: 0px;
+  box-shadow: 5px 5px 10px rgb(51, 50, 50);
+  /* font-size: 20px; */
+}
+.complete-btn {
+  background-image: linear-gradient(120deg, #10f367 20%, #cfbe25e5 70%);
+  color: rgb(248, 245, 245);
+  margin-right: 7px;
+}
+.todo-item {
+  padding: .5rem 0.8rem;
+  border-radius: 25px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.fa-trash,
+.fa-check {
+  pointer-events: none;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0 !important;
+  background-image: none;
+  border-radius: 10px;
+  color: #bd3970;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  width: 14.5rem;
+}
+.select {
+  margin: 1.8rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0px 0px 2px #5f5f5f,
+  0px 0px 0px 5px rgb(245, 242, 242),
+  5px 5px 5px #ecf0ec,
+  3px 3px 15px #afaaa7,
+  -3px -3px 15px #fff;
+  border-radius: 20px;
+  border: none; 
+  font-size: 18px;
+}
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  background: #e20707e1;
+  cursor: pointer;
+  pointer-events: none;
+  box-shadow: 0px 0px 2px #5f5f5f,
+  0px 0px 0px 5px rgb(245, 242, 242),
+  5px 5px 5px #ecf0ec,
+  0px 0px 15px #530a00,
+  0px 0px 5px #fff;
+}
+.filter-todo{
+  font-size: 20px;
+  color: #5f5f5f;
+}
+.select option{
+  font-size: 20px;
+}
+@media (max-width: 500px){
+  form input,
+  form button {
+    font-size: 1rem;
+  } 
+  select{
+    height: .1rem;
+    width: .1rem; 
+  }
+  .select option{
+    font-size: 8px;
+    padding: 10px;
+  }
+  .filter-todo{
+    font-size: 13px;
+  }
+  .select::after{
+    padding: .4rem;
+  }
+  .todo{
+    padding: 0 .2rem;
+  }
+  .todo li{
+    font-size: 13px;
+  }
+  .trash-btn,.complete-btn{
+    font-size: .8rem;
+    padding: .5rem;
+  }
+}
